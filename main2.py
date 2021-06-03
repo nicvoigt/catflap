@@ -22,7 +22,7 @@ time.sleep(60)
 
 while True:
     zeit1 = time.time()
-    if not 7 < datetime.datetime.now().hour < 21:
+    if not 7 < datetime.datetime.now().hour < 20:
 
         if pir.motion_detected:
             print("Bewegung erkannt")
