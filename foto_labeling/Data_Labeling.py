@@ -14,6 +14,7 @@ class Data_Labeler:
         # search for latest pictures taken and fill photo_dict with directories
         os.chdir(self.unlabeled_dir)
         self.photo_dir = [self.unlabeled_dir  + "/" +file for file in glob.glob("*.jpg")]
+        self.photo_dir.sort(key=os.path.getctime)
         self.photo_label = [None] * len(self.photo_dir)
         self.photo_names = [file for file in glob.glob("*.jpg")]
 
