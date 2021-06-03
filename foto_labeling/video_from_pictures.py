@@ -18,5 +18,4 @@ for image in images:
     video.write(cv2.imread(os.path.join(image_folder, image)))
 
 cv2.destroyAllWindows()
-cv2.flip(video, 0)
 video.release()
